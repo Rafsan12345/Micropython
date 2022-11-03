@@ -1,0 +1,195 @@
+# this section cnt't Run!!!!
+# comment and formating Section
+
+'''
+           if <>:
+             stmnt.....
+           elif<>:
+             stmnt.....
+           else:
+              stmnt.....
+'''
+ 
+        '''for i in range():'''
+'''
+from machine import Pin, ADC, PWM
+p1 = Pin(0, Pin.IN, Pin.PULL_UP)
+p1 = Pin(0, Pin.IN, Pin.PULL_DOWN)
+uart = UART(0, baudrate=115200) #uart.write(b"Hellow\n")
+p0 = Pin(2,Pin.OUT) #output pin define
+p1 = Pin(0,Pin.IN)  #input pin define
+p0.init(p0.IN, p0.PULL_DOWN)
+'''
+
+''
+Digital input output::::::
+
+p1.value()
+pin.value(0)
+pin.value(1)
+pin.off()
+pin.on()
+pin.high()
+pin.low()
+toggle(pin)
+
+'''
+
+'''try:
+        x = p1.value()
+        p0.value(x)
+   except:
+        print("problem detect")
+        p0.off()
+        break
+    '''
+'''from machine import Pin, PWM
+pwm0 = PWM(Pin(0)) # create PWM object from a pin
+pwm0.freq() # get current frequency
+pwm0.freq(1000) # set frequency
+pwm0.duty() # get current duty cycle
+pwm0.duty(200) # set duty cycle
+pwm0.deinit() # turn off PWM on the pin
+pwm2 = PWM(Pin(2), freq=500, duty=512) # create and configure in one go
+'''
+'''
+from machine import ADC
+adc = ADC(0) # create ADC object on ADC pin
+adc.read() # read value, 0-1024
+'''
+
+
+'''
+from machine import RTC
+rtc = RTC()
+rtc.datetime((2017, 8, 23, 1, 12, 48, 0, 0)) # set a specific date and time
+rtc.datetime() # get date and time
+# synchronize with ntp
+# need to be connected to wifi
+import ntptime
+ntptime.settime() # set the rtc datetime from the remote server
+rtc.datetime() # get the date and time in UTC
+'''
+'''
+import dht
+import machine
+d = dht.DHT11(machine.Pin(4))
+d.measure()
+d.temperature() # eg. 23 (°C)
+'''
+'''
+classs x():
+ def c():
+  stmnt.....
+ def c():
+  stmnt.....
+'''
+ '''
+def x ():
+ stmnt.....
+''' 
+'''
+x = input("abcd?") // string
+x = int(input("abcd?")) // integer
+'''
+'''
+print("asdfgh") 
+print(x)
+print(f'abcd {}')
+string_one = "I’m reading "
+string_two = "a new great book!"
+string_three = string_one + string_two
+name = input("Hi! What's your name? ")
+print("Nice to meet you " + name + "!")
+age = input("How old are you ")
+print("So, you are already " + str(age) + " years old, "
++ name + "!")
+print('Nice to meet you, {}'.format(x))
+
+'''
+
+'''
+Operators Operation Example
+** Exponent 2 ** 3 = 8
+% Modulus/Remainder 22 % 8 = 6
+// Integer division 22 // 8 = 2
+/ Division 22 / 8 = 2.75
+* Multiplication 3 * 3 = 9
+- Subtraction 5 - 2 = 3
++ Addition 2 + 2 = 4
+Python Cheat Sheet 6
+WebsiteSetup.or
+'''
+'''==
+Equal to
+!=
+Not equal to
+<
+Less than
+>
+Greater Than
+<=
+Less than or Equal to
+>=
+'''
+'''
+while True:
+print('This block of code is running...')
+if var == 10:
+break
+var += 1
+print('Loop exited')
+
+// continue
+
+var = 0
+while var <= 10:
+var += 1
+if var == 5:
+continue
+print('This block of code is running for number... ', var)
+print('Loop exited')
+
+ '''
+ '''
+List = [1, 2, 3, 4, 5, 5, 1]
+'''
+ '''
+    def divideBy(num):
+        try:
+            print(10 / num)
+        except:
+            print("Cannot divide by 0")
+        finally:
+            print("Division finished")
+ '''
+ '''
+import time
+
+time.sleep(1)           # sleep for 1 second
+time.sleep_ms(500)      # sleep for 500 milliseconds
+time.sleep_us(10)       # sleep for 10 microseconds
+start = time.ticks_ms() # get millisecond counter
+delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
+'''
+ 
+ 
+ '''
+from machine import Timer
+
+tim = Timer(-1)
+tim.init(period=5000, mode=Timer.ONE_SHOT, callback=lambda t:print(1))
+tim.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(2))
+'''
+ '''
+while True:
+    try:
+        x = p1.value()
+        p0.value(x)
+    except:
+        print("problem detect")
+        p0.on()
+        break
+'''
+
+

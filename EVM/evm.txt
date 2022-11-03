@@ -1,0 +1,78 @@
+c = 0
+e = 0
+v = 0
+g = 0
+k = 0
+y = 0
+z = 0
+w = 0
+
+while True:
+    f = open('NID_List.txt', 'r')
+    f2 = open('Total_Count.txt', 'a')
+    f3 = open('Chek_list.txt', 'r')
+    f2.write(f"[A]{k}\n[B]{y}\n[C]{z}\n[D]{w}\nTotal count {((k+y+z+w)/5)*100}%\n")  # count
+    f2.close()
+
+
+    l = f.read()
+    id = (input("Please input your NID?"))
+    if id in l:
+        x = int(input("Please Submit Your Vote:::"))
+        ch = f3.read()
+
+        if id in ch:
+            print("Your Vote  Alrady Completed....You dont have again pressed....!!!!!!")
+            continue
+
+        elif x == 1:
+            c = c + 1
+            k = c
+            kk = str(k)
+            #f2.write(f"[A] Total vote {k} \n") #count
+            f3 = open('Chek_list.txt', 'a')
+            f3.write(str(f'{id}\n')) #chek
+            print(f"{id} your vote Sucessfully Complete")
+            f2.close()
+            f2.close()
+            f3.close()
+
+
+
+        elif x == 2:
+            e = e + 1
+            y = e
+            yy = str(y)
+            #f2.write(f"[B] Total vote {y}\n")
+            f3 = open('Chek_list.txt', 'a')
+            f3.write(str(f'{id}\n'))
+            print(f"{id} your vote Sucessfully Complete")
+            f2.close()
+            f3.close()
+
+        elif x == 3:
+            v = v + 1
+            z = v
+            #f2.write(f"[C] Total vote {z}\n")
+            f3 = open('Chek_list.txt', 'a')
+            f3.write(str(f'{id}\n'))
+            print(f"{id} your vote Sucessfully Complete")
+            f2.close()
+            f3.close()
+        elif x == 4:
+            g = g + 1
+            w = g
+            #f2.write(f"[D] Total vote {w}\n")
+            f3 = open('Chek_list.txt', 'a')
+            f3.write(str(f'{id}\n'))
+            print(f"{id} your vote Sucessfully Complete")
+            f2.close()
+            f3.close()
+        else:
+            print("{id} You pressed Wrong Code....please try again...!!!")
+
+
+
+
+    else:
+        print("You pressed Wrong NID....please try again...!!!")

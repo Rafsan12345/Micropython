@@ -1,0 +1,23 @@
+
+CV link 
+from Bangladesh 
+https://drive.google.com/drive/folders/1O9PM0Br_X4krPeHQ-i2h1DbjxxfcSvrl
+
+#Function
+.
+.
+.
+blynk(pin,time_on,time_off)
+digitalWrite(pin,Logic)
+digitalRead(pin)
+delay(ms)
+analogRead()
+analogWrite(pin,value)
+looping(m,n)
+lcd(message)
+clear()
+map(x,min1,max1,min2,max2)
+constrain(x,mi,mx)
+increasing(c)
+decreasing(c)
+Serial_write(x)
