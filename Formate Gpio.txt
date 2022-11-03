@@ -1,0 +1,23 @@
+from machine import UART,Pin
+import time
+
+p0 = Pin(2,Pin.OUT) #output pin define
+p1 = Pin(0,Pin.IN)  #input pin define
+
+
+while True:
+    try:
+        #...............................................!
+        x = p1.value()
+        p0.value(x)
+        
+        
+        
+        
+        
+       #................................................!
+    except:
+        print("problem detect")
+        p0.on()
+        break
+    
